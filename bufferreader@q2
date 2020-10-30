@@ -1,0 +1,23 @@
+package labassignmentday4;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+public class bufferreader {
+  public static void main(String args[]) throws IOException {
+	  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	  BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
+	  String name=br.readLine();
+	  //String name1="One hot day, a thirsty crow flew all over the fields looking for water. ... ";
+	   //System.out.println(bw.write("One hot day, a thirsty crow flew all over the fields looking for water. ..."));
+	   bw.write("Hai!......\n");
+	   bw.flush();
+	  //System.out.println(output);
+	  
+	  System.out.println(name);
+	  //System.out.println(bufferwriter);
+  }
+}
