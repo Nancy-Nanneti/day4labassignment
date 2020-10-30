@@ -1,0 +1,42 @@
+package labassignmentday4;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+ 
+public class fileformatbyte {
+     
+    public static void main(String[] args) {
+         
+        File file = new File("inputfile.txt");
+       FileInputStream fin = null;
+        //boolean fin=false;
+        try {
+        	
+            fin = new FileInputStream(file);
+ 
+            byte fileContent[] = new byte[(int)file.length()];
+             
+            fin.read(fileContent);
+            String s = new String(fileContent);
+            System.out.println("File content: " + s);
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("File not found" + e);
+        }
+        catch (IOException ioe) {
+            System.out.println("Exception while reading file " + ioe);
+        }
+        /*finally {
+            try {
+                if (fin != null) {
+                    fin.close();
+                }
+            }
+            catch (IOException ioe) {
+                System.out.println("Error while closing stream: " + ioe);
+            }
+        }*/
+    }
+}
